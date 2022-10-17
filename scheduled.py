@@ -36,13 +36,13 @@ for i in range(24):
    if len(k) == 1:
     k = '0' + k
    s = k + ":00:00"
-   scheduled_times.append((s, 60))
+   scheduled_times.append((s, 600))
    s = k + ":15:00"
-   scheduled_times.append((s, 60))
+   scheduled_times.append((s, 600))
    s = k + ":30:00"
-   scheduled_times.append((s, 60))
+   scheduled_times.append((s, 600))
    s = k + ":45:00"
-   scheduled_times.append((s, 60))
+   scheduled_times.append((s, 600))
 
 for x in scheduled_times:
     schedule.every().day.at(x[0]).do(get_stream,x[1])
