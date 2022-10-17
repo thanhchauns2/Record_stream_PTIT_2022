@@ -6,7 +6,7 @@ import schedule # pip install schedule
 
 default_length = 60 # Seconds
 vlcInstance = vlc.Instance("--demux=ts",b"--rtsp-frame-buffer-size=800000",b"--network-caching=1000")
-path = "D://iec_ptit_2022/cvanomaly_detection/xarac/record16h_18h/scheduled/"
+path = "/Streams/"
 
 #get Preset Path
 def get_path():
