@@ -27,9 +27,19 @@ def get_stream(length = default_length):
     media.release()
 
 scheduled_times = [
-    ("15:41:00", 60),
-    ("15:41:45", 75),
+#     ("15:40:00", 60),
+#     ("15:40:45", 75),
 ]
+
+for i in range(24):
+   s = str(i) + ":00:00"
+   scheduled_times.append(s, 60)
+   s = str(i) + ":15:00"
+   scheduled_times.append(s, 60)
+   s = str(i) + ":30:00"
+   scheduled_times.append(s, 60)
+   s = str(i) + ":45:00"
+   scheduled_times.append(s, 60)
 
 for x in scheduled_times:
     schedule.every().day.at(x[0]).do(get_stream,x[1])
