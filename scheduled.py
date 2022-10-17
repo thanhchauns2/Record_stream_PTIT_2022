@@ -32,13 +32,16 @@ scheduled_times = [
 ]
 
 for i in range(24):
-   s = str(i) + ":00:00"
+   k = str(i)
+   if len(k) == 1:
+    k = '0' + k
+   s = k + ":00:00"
    scheduled_times.append((s, 60))
-   s = str(i) + ":15:00"
+   s = k + ":15:00"
    scheduled_times.append((s, 60))
-   s = str(i) + ":30:00"
+   s = k + ":30:00"
    scheduled_times.append((s, 60))
-   s = str(i) + ":45:00"
+   s = k + ":45:00"
    scheduled_times.append((s, 60))
 
 for x in scheduled_times:
