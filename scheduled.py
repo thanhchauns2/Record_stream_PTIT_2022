@@ -48,9 +48,7 @@ for x in scheduled_times:
     schedule.every().day.at(x[0]).do(get_stream,x[1])
 
 def run():
-    d1 = datetime.now()
-    d1 = datetime(d1.year,d1.month,d1.day,18,1,0)
-    while datetime.now() < d1:
+    while True:
         schedule.run_pending()
         time.sleep(1)
 
