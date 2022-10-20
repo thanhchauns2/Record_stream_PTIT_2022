@@ -10,10 +10,10 @@ path = "Streams/"
 
 #get Preset Path
 def get_path():
-   
-    if(os.path.exists(path) == False):
-        os.makedirs(path)
-    return path
+    __path = path + datetime.now().strftime("%m-%d-%Y")
+    if(os.path.exists(__path) == False):
+        os.makedirs(__path)
+    return __path
 
 def get_stream(length = default_length):
     mediaName = datetime.now().strftime("%m-%d-%Y-%Hh%Mm%Ss") +".avi"
